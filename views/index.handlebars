@@ -1,0 +1,63 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Burger Time!</h1>
+    <p class="lead">Create and eat as many burgers as you desire</p>
+  </div>
+</div>
+
+<div class="burger_colums">
+  <div class="col-sm-4">
+    <h1> Burgers available to eat**</h1>
+  </div>
+  <div class="col-sm-4">
+    <img class="big-burger" src="assets/img/bigolburger.jpg" alt="bigBurger">
+  </div>
+  <div class="col-sm-4">
+    <h1> Burgers devoured**</h1>
+  </div>
+  
+
+</div>
+
+
+<div class="burgers_served">
+<h2>Burgers are served!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+
+
+
+<h2>Burgers available!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bur">Burger Name:</label>
+    <input type="text" id="bur" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">What to do with the burger?</label><br>
+    <input type="radio" name="devoured" value="1" checked> EAT IT! EAT IT!<br>
+    <input type="radio" name="devoured" value="0"> Serve it!
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
