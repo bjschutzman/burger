@@ -1,3 +1,10 @@
+.jumbotron{
+  background: black;
+  text-align: center;
+  color: #f4c242
+}
+
+
 body {
   background-color: #f4c242;
 }
@@ -6,11 +13,12 @@ img {
   width: 75%;
 }
 
-.red_font {
-  color: #bc001f;
+.row{
+  padding: 40px;
 }
 
-.tiny_text {
-  font-size: 11px;
-  color: #5da82f;
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: red;
 }
+
